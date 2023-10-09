@@ -29,3 +29,25 @@ function factorialize(num) {
   
 factorialize(5);
 //-------------------------------------------
+function findLongestWordLength(str) {
+    let count = 0;
+    let countbar = 0;
+    for (let i = 0; i < str.length; i++){
+      if (" " == str[i]){
+        if (count > countbar){
+          countbar = count;
+          console.log(countbar); 
+        }
+        count = 0;
+      }else{
+        count++;
+      }}
+      if (count > countbar){
+        countbar = count;
+      }
+  
+      return countbar;
+    }
+  
+  findLongestWordLength("The quicks brown fox jumped over the lazy dog");
+//-------------------------------------------
