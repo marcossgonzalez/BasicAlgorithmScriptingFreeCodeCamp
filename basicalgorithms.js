@@ -51,3 +51,16 @@ function findLongestWordLength(str) {
   
   findLongestWordLength("The quicks brown fox jumped over the lazy dog");
 //-------------------------------------------
+function largestOfFour(arr) {
+    let array = [];
+    for (let i = 0; i<arr.length; i++){
+      let numnext = arr[i][0];
+      for (let j = 0; j<arr[i].length; j++){
+          if (numnext < arr[i][j]){
+            numnext = arr[i][j];
+          }}array[i] = numnext;}
+          return array;
+  }
+  
+  largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]);
+//-------------------------------------------
