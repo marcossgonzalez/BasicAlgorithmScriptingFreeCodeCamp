@@ -91,3 +91,35 @@ function confirmEnding(str, target) {
 
 
 console.log(confirmEnding("Abstraction", "action"));
+//-------------------------------------------
+function repeatStringNumTimes(str, num) {
+  if (num <1){
+    return "";
+  }
+  if (str.length>1){
+    let array = ''
+    if (/a-zA-Z/){
+      for (let i = 0; i< num; i++){
+      array+=(str);
+      
+      }
+      return array;
+    }
+    for (let i = 0; i< (str.length*num)/num; i++){
+    array+=str;
+    console.log(array);
+    }
+    return array;
+  }
+  else{
+    let array = ''
+    for (let i = 0; i< str.length*num; i++){
+    array+=str;
+    
+    }
+    return array;
+  }
+}
+
+console.log(repeatStringNumTimes("abc", 4));
+//-------------------------------------------
