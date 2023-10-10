@@ -176,3 +176,22 @@ function titleCase(str) {
 
 console.log(titleCase("HERE IS MY HANDLE HERE IS MY SPOUT"));
 //-------------------------------------------
+function frankenSplice(arr1, arr2, n) {
+  let arr2copy = arr2.slice();
+  for (let i = 0; i< arr1.length; i++){
+    arr2copy.splice(n, 0, arr1[i]);
+    n++;
+    }
+  return arr2copy;
+}
+
+console.log(frankenSplice([1, 2, 3], [4, 5], 1));
+//-------------------------------------------
+function bouncer(arr) {
+  let regex = /false|null|undefined|NaN/;
+  arr = arr.filter(Boolean);
+return arr;
+}
+
+console.log(bouncer([7, "ate", "", false, 9]));
+//-------------------------------------------
