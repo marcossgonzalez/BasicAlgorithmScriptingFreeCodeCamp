@@ -125,3 +125,15 @@ function repeatStringNumTimes(str, num) {
 
 console.log(repeatStringNumTimes("abc", 4));
 //-------------------------------------------
+function truncateString(str, num) {
+  let string = "";
+  if (num < str.length) {
+    string = str.slice(0, num) + "...";
+  } else {
+    return str;
+  }
+  return string;
+}
+
+truncateString("A-tisket a-tasket A green and yellow basket", 8);
+//-------------------------------------------
