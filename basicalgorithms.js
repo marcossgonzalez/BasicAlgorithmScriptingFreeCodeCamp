@@ -64,3 +64,30 @@ function largestOfFour(arr) {
   
   largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]);
 //-------------------------------------------
+function confirmEnding(str, target) {
+  let count = target.length;
+  do{
+    for (let i = target.length-1; i>=0; i--){
+      for ( let j = str.length-1; j>=target.length; j--){
+        if (str[j] == target[i]){
+          count--;
+          console.log(target[i], str[j+1]);
+          if (count==0){
+            return true;
+          }
+          i--;
+          continue;
+        }
+        else if (str[j] != target[i]){
+          console.log(target[i], str[j+1]);
+          count--;
+          return false;
+        }
+      }
+    }
+  return true;
+  }while (count>=0);
+  }
+
+
+console.log(confirmEnding("Abstraction", "action"));
