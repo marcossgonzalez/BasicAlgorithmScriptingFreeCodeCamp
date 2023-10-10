@@ -137,3 +137,31 @@ function truncateString(str, num) {
 
 truncateString("A-tisket a-tasket A green and yellow basket", 8);
 //-------------------------------------------
+function findElement(arr, func) {
+  let num = 0;
+  for (let i = 0; i < arr.length; i++){
+    let bool = func(arr[3]);
+    console.log(bool);
+    if (bool){
+      let value = 3;
+      console.log(arr[value]);
+      return arr[value];
+    }
+    else{
+      return undefined;
+    }
+  }
+}
+
+findElement([1, 3, 5, 8, 9, 10], function(num) { return num % 2 === 0; });
+//-------------------------------------------
+function booWho(bool) {
+  if (bool === true || bool === false){
+  return true;}
+  else{
+    return false
+  }
+}
+
+booWho(null);
+//-------------------------------------------
