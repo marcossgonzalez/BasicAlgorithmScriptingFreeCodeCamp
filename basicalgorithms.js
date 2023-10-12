@@ -195,3 +195,26 @@ return arr;
 
 console.log(bouncer([7, "ate", "", false, 9]));
 //-------------------------------------------
+function getIndexToIns(arr, num) {
+  if (arr.length === 0){
+       return 0;}
+ let index = 0;
+ for (let i = 0; i < arr.length; i++){
+   if (arr[i]){
+     let um = arr[i];
+     console.log(arr[i]);
+     if (um == num){
+       index = i;
+       console.log(i);
+     }else if (num > um){
+       index +=1;
+       console.log(index);
+     }else{
+       index += 0;
+     }
+   }
+ }return index;
+}
+
+getIndexToIns([40, 60], 50);
+//-------------------------------------------
