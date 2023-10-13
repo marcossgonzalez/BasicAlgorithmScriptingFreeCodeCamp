@@ -232,7 +232,7 @@ function mutation(arr) {
 mutation(["hello", "hey"]);
 //-------------------------------------------
 function chunkArrayInGroups(arr, size) {
-  let copySize = size;
+  //let copySize = size;
   let copyArr = [];
   for (let i = 0; i < arr.length; i+=size){
       copyArr.push(arr.slice(i,i+ size)); 
