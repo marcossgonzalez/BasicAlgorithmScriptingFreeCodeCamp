@@ -218,3 +218,27 @@ function getIndexToIns(arr, num) {
 
 getIndexToIns([40, 60], 50);
 //-------------------------------------------
+function mutation(arr) {
+  let arr1 = arr[0].toLowerCase();
+  let arr2 = arr[1].toLowerCase();
+  for (let i = 0; i< arr[1].length;i++){
+      if (arr1.indexOf(arr2[i]) < 0)
+        return false;
+  }return true;
+      }
+  
+
+
+mutation(["hello", "hey"]);
+//-------------------------------------------
+function chunkArrayInGroups(arr, size) {
+  let copySize = size;
+  let copyArr = [];
+  for (let i = 0; i < arr.length; i+=size){
+      copyArr.push(arr.slice(i,i+ size)); 
+  }
+  console.log(copyArr);
+  return copyArr;
+}
+
+chunkArrayInGroups([0, 1, 2, 3, 4, 5], 2);
